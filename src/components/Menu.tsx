@@ -22,10 +22,11 @@ const Menu = () => {
       {open && (
         <div className="absolute bg-lama text-white left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-8 text-xl  z-10">
           <Link href="/">Home</Link>
-          <Link href="/">Shop</Link>
-          <Link href="/">Deals</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/list?cat=all-products">All Products</Link>
+          <Link href="/list?cat=bags">Bags</Link>
+          <Link href="/list?cat=hoodie">Hoodie</Link>
+          <Link href="/list?cat=baggy">Jeans</Link>
+          <Link href="/list?cat=t-shirts">T-Shirts</Link>
           <Link href="/">Logout</Link>
           <Link href="/">Cart({counter})</Link>
         </div>
