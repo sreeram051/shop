@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
     "@wix/ecom": "^1.0.575",
     "@wix/members": "^1.0.85",
     "@wix/redirects": "^1.0.47",
     "@wix/sdk": "^1.9.1",
     "@wix/stores": "^1.0.153",
+    "gsap": "^3.12.5",
     "isomorphic-dompurify": "^2.9.0",
     "js-cookie": "^3.0.5",
     "next": "14.2.2",
