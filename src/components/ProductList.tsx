@@ -57,24 +57,25 @@ const ProductList = async ({
           className="w-full flex flex-col gap-4 sm:w-[45%] lg:w-[22%]"
           key={product._id}
         >
-          <div className="relative w-full h-80">
-            <Image
-              src={product.media?.mainMedia?.image?.url || "/product.png"}
-              alt=""
-              fill
-              sizes="25vw"
-              className="absolute object-cover rounded-md z-10 hover:opacity-0 transition-opacity easy duration-500"
-            />
-            {product.media?.items && (
-              <Image
-                src={product.media?.items[1]?.image?.url || "/product.png"}
-                alt=""
-                fill
-                sizes="25vw"
-                className="absolute object-cover rounded-md"
-              />
-            )}
-          </div>
+        <div className="relative w-full h-80 overflow-hidden">
+  <Image
+    src={product.media?.mainMedia?.image?.url || "/product.png"}
+    alt=""
+    fill
+    sizes="25vw"
+    className="w-full h-full object-cover rounded-md transition-opacity duration-500"
+    style={{ opacity: 1 }}
+  />
+  {product.media?.items && (
+    <Image
+      src={product.media?.items[1]?.image?.url || "/product.png"}
+      alt=""
+      fill
+      sizes="25vw"
+      className="w-full h-full object-cover rounded-md absolute top-0 left-0 transition-opacity duration-500 opacity-0 hover:opacity-100"
+    />
+  )}
+</div>
           <div className="flex justify-between">
             <span className="font-medium">{product.name}</span>
             <span className="font-semibold">${product.price?.price}</span>
